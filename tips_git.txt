@@ -1,0 +1,62 @@
+
+Touriachi@DESKTOP-TO117EB MINGW64 ~ (master)
+$ cd ..
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/Users (master)
+$ cd ..
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c (master)
+$ cd  githubWorkspace/
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$ git  push  origin masteer
+error: src refspec masteer does not match any.
+error: failed to push some refs to 'https://gihub.com/touriachi/repo.git'
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$ git  push  origin master
+
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$ set GIT_CURL_VERBOSE=1
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$ git  push  origin master
+
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$ git  push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$ git  push origin master
+
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$ git remote set-url origin https://touriachi@github.com/touriachi/repo.git
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$ git push  origin  master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 208 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/touriachi/repo.git
+ * [new branch]      master -> master
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$ ^C
+
+Touriachi@DESKTOP-TO117EB MINGW64 /c/githubWorkspace (master)
+$
