@@ -1,0 +1,62 @@
+Sub toto()
+
+Range("donnees").End(xlToRight).Select
+MsgBox Range("donnees").End(xlToRight).
+
+
+toto = Abs(ActiveCell.Row - Range("donnees").End(xlToRight).Row) + 1
+
+=kMeansCell(B5:C14,2)
+
+kMeansCell($B$5:$C1$4,2)
+
+
+=kMeansCell($B$5:$C$14,2)
+
+Function ThisRow_Col(rColumn As Range)
+    ' Return INDIRECT(rcolumn & ROW())
+
+    ThisRow_Col = Application.Caller.Worksheet.Cells(Application.Caller.Row, rColumn.Column).Value
+
+End Function
+
+
+
+
+
+Function kMeansCell(Table As Range, Clusters As Integer)
+
+    'MsgBox ActiveCell.Row & ", " & ActiveCell.Column
+
+    On Error GoTo kMeansCell_Error
+  
+    If Table Is Nothing Then
+        kMeansCell = "Invalid Range"
+        Exit Function
+    End If
+    
+    If Not IsNumeric(Clusters) Or (Clusters < 2) Then
+        kMeansCell = "Invalid cluster aize"
+        Exit Function
+    End If
+ 
+ 
+    'Check table dimensions
+    If Table.Rows.Count < 4 Or Table.Columns.Count < 2 Then
+           kMeansCell = "Table has insufficent rows or columns."
+           Exit Function
+    End If
+   
+   
+    
+     If kMeans(Table, Clusters) Then
+        pos = Abs(ActiveCell.Row - Table.End(xlToRight).Row) + 1
+        kMeansCell = Record(pos).Cluster
+        Exit Function
+         
+    End If
+
+kMeansCell_Error:
+    kMeansCell = "Unexecpcted error" + Err.Description
+
+End Function
